@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Raleway", sans-serif;
+  }
+}
+@layer components {
+  .my-container {
+    max-width: 1400px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .navbar {
+    @apply w-full fixed bg-slate-900 z-[999] px-10 md:px-20;
+  }
+
+  .navbar-container {
+    @apply block md:flex justify-between items-center h-16 my-container;
+  }
+
+  .hamburger {
+    @apply md:hidden block absolute z-[2] w-10 h-8 top-4 left-10 text-slate-100 cursor-pointer;
+  }
+  .menu-items {
+    @apply md:flex flex-col md:flex-row order-2 gap-5 md:bg-transparent  bg-slate-900 h-screen md:h-auto max-w-[300px] md:max-w-full transition-all duration-300 -ml-[75px] md:ml-0 pl-12 md:pl-0 pt-[100px] md:pt-0 space-y-8 md:space-y-0 ease-in-out;
+  }
+  .menu-items li {
+    @apply text-2xl md:text-xl text-slate-100 font-semibold hover:text-slate-400 duration-200 cursor-pointer;
+  }
+
+  .logo {
+    @apply order-1 text-3xl font-signature text-slate-100 capitalize block absolute md:sticky top-4 md:top-0 right-10 md:right-0 hover:-translate-y-1 duration-100;
+  }
 }
