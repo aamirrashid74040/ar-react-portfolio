@@ -36,6 +36,6 @@
   }
 
   .logo {
-    @apply order-1 text-3xl font-signature text-slate-100 capitalize block absolute md:sticky top-4 md:top-0 right-10 md:right-0 hover:-translate-y-1 duration-100;
+    @apply order-1 text-3xl font-signature text-slate-100 capitalize block absolute md:sticky top-4 md:top-0 right-10 md:right-0 hover:-translate-y-1 hover:text-indigo-200 duration-100;
   }
 }
